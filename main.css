@@ -1,0 +1,368 @@
+/* https://alameda-demo.squarespace.com/ */
+/* 768px變版*/
+/* 全域 */
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* 包裝類別 */
+.container{
+    width: 100%;
+    margin: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -2rem;
+    margin-right: -2rem;
+}
+
+.dp-no{
+    display: none;
+}
+
+/* 排列方式 */
+.fx-wp{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.jc-fs{
+    justify-content: flex-start;
+}
+
+.jc-fe{
+    justify-content: flex-end;
+}
+
+.ai-md{
+    align-items: center;
+}
+
+.jc-ai{
+    justify-content: center;
+    align-items: center;
+}
+
+.ta-ct{
+    text-align: center;
+}
+
+/* 尺寸 */
+.wd-100{
+    width: 100%;
+}
+
+.wd-33{
+    width: 33.33%;
+}
+
+.pd-both{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pd-top6{
+    padding-top: 6rem;
+}
+
+.pd-top2{
+    padding-top: 2rem;
+}
+
+.pd-bot6{
+    padding-bottom: 6rem;
+}
+
+.pd-bot2{
+    padding-bottom: 2rem;
+}
+
+.pd-botsp{
+    padding-bottom: 120%;
+}
+
+.pd-bots2{
+    padding-bottom: 100%;
+}
+
+/* 個別控制 */
+    /* NAV */
+.line-btn{
+    width: 36px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.line{
+    width: 32px;
+    height: 2px;
+    background-color: gray;
+}
+
+nav h1{
+    font-size: 2rem;
+}
+
+.fa-cart-shopping{
+    font-size: 1.2rem;
+}
+/* NAV FILTER */
+
+.filter{
+    border-bottom: 1px solid lightgray;
+}
+
+.bd-md{
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+}
+
+/* MAIN */
+.item-col{
+    width: 100%;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.item-pic  {
+    background-image: url(https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg?format=1000w),url(https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1585924962177-GO2SN5WOIMC9RQTF8H7F/ulihu-charcoal-silk-linen-tunic_DETAIL.jpg?format=1000w) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: .5s;
+    position: relative;
+}
+
+.item-pic::before{
+    content: 'QUICK VIEW';
+    display: block;
+    position: absolute;
+    width: 8rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    padding: 3% 2% 3% 2%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+    transform: translatex(-50%);
+    transition: .5s;
+    opacity: 0;
+}
+
+.item-txt{
+    line-height: 2;  
+}
+
+.item-txt h3{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.item-txt h4{
+    text-align: end;
+    color: transparent;
+    font-weight:700;
+}
+
+.item-txt .item-txt-sale{
+    text-align: end;
+    color: grey;
+    font-weight:700;
+}
+
+.item-txt .item-txt-price{
+    text-decoration: none;
+    color: black;
+}
+
+.item-txt .item-txt-price::before{
+    content: '$';
+    color: black;
+}
+
+.item-txt .item-txt-bprice{
+    color: black;
+    text-decoration: line-through;
+}
+
+.item-txt .item-txt-bprice::before{
+    content: '$';
+    text-decoration: line-through;
+    color: black;
+}
+
+.item-txt .item-txt-sprice{
+    text-decoration: none;
+    color: lightgrey;
+}
+
+.item-txt .item-txt-sprice::before{
+    content: '$';
+    color: lightgrey;
+}
+
+.item-txt .item-txt-none{
+    display: none;
+}
+
+.item-txt .item-txt-fprice{
+    display: inline;
+}
+
+/* 換圖片作法 */
+.item-wrap:hover .item-pic{
+    background-image: url(https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1585924962177-GO2SN5WOIMC9RQTF8H7F/ulihu-charcoal-silk-linen-tunic_DETAIL.jpg?format=1000w),url(https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg?format=1000w);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: .5s;
+}
+
+/* 圖片縮放位移作法 */
+/* .item-wrap:hover .item-pic{
+    background-image: url(https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg?format=1000w);
+    background-repeat: no-repeat;
+    background-size: 300%;
+    background-position: 60% 35%;
+} */
+
+.item-wrap:hover .item-pic::before{
+    opacity: 10;
+    transition: .5s;
+}
+
+/* FOOTER */
+footer h2{
+    font-size: 2rem;
+}
+
+footer h2 a{
+    border-bottom: 1px solid lightgrey;
+}
+
+footer i{
+    font-size: 1.4rem;
+}
+
+footer p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+}
+
+footer input{
+    all: unset;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9rem;
+    height: 3.4rem;
+    border-radius: 0%;
+    border: 1px solid lightgrey;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: left;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+footer input::placeholder{
+    color: lightgrey;
+    font-size: .9rem;
+    font-weight: 100;
+}
+
+footer input[type="button"]{
+    color: white;
+    background-color: gray;
+    cursor:pointer;
+}
+
+/* 768pxRWD */
+@media screen and (min-width: 768px) {
+    /* NAV */
+    .line-btn-wp{
+        display: none;
+    }
+
+    .dp-no{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .nav-op{
+        padding-right: 1rem;
+    }
+
+    .nav-op a{
+        display: block;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        border-bottom: 1px solid transparent;
+        transition: .5s;
+    }
+
+    .nav-op:nth-child(1) a{
+        border-bottom: 1px solid black;
+    }
+
+    .nav-left:hover .nav-op:nth-child(1) a{
+        border-bottom: 1px solid transparent;
+    }
+
+    .nav-left .nav-op:hover a:nth-child(1){
+        border-bottom: 1px solid black;
+    }
+
+    .nav-i{
+        padding-left: 1rem;
+    }
+
+    .nav-ii{
+        padding-left: 2rem;
+    }
+
+    /* ITEMS */
+    .rwd-row{
+        margin-left: -1vw;
+        margin-right: -1vw;
+    }
+
+    .item-col{
+        width: 25%;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+
+    .item-pic{
+        padding-bottom: 135%;
+    }
+
+    .item-txt h3{
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    .item-pic::before{
+        content: 'QUICK VIEW';
+        display: block;
+        position: absolute;
+        font-size: .6rem;
+        width: 6rem;
+    }
+}
